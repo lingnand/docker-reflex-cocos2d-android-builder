@@ -1,0 +1,3 @@
+[submodule "nix-build-ghc-android"]
+	path = nix-build-ghc-android
+	url = https://github.com/lynnard/nix-build-ghc-android
