@@ -1,7 +1,7 @@
 FROM busybox
 
 ENV \
-    NIX_VERSION=1.11.13 \
+    NIX_VERSION=1.11.2 \
     NIX_PATH=/nix/var/nix/profiles/per-user/root/channels/ \
     PATH=/root/.nix-profile/bin:/root/.nix-profile/sbin:/bin:/sbin:/usr/bin:/usr/sbin \
     SSL_CERT_FILE=/root/.nix-profile/etc/ssl/certs/ca-bundle.crt
@@ -19,5 +19,5 @@ RUN wget -O- http://nixos.org/releases/nix/nix-$NIX_VERSION/nix-$NIX_VERSION-x86
     && nix-collect-garbage -d
 
 COPY nix-build-ghc-android /nix-build-ghc-android
-RUN nix-shell --run true /nix-build-ghc-android
-CMD ["nix-shell", "/nix-build-ghc-android"]
+RUN nix-shell --run true /nix-build-ghc-android/shell.nix
+CMD ["nix-shell", "/nix-build-ghc-android/shell.nix"]
