@@ -20,4 +20,4 @@ RUN wget -O- http://nixos.org/releases/nix/nix-$NIX_VERSION/nix-$NIX_VERSION-x86
 
 COPY nix-build-ghc-android /nix-build-ghc-android
 RUN nix-shell --run true /nix-build-ghc-android/shell.nix
-CMD ["nix-shell", "/nix-build-ghc-android/shell.nix"]
+ENTRYPOINT ["nix-shell", "/nix-build-ghc-android/shell.nix"]
