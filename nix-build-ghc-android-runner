@@ -1,0 +1,24 @@
+#! /usr/bin/env nix-shell
+#! nix-shell -i bash -p bash
+
+# A simple runner that takes arguments in the form of:
+# nix-build-ghc-android-runner [ARG] [ARG] -- [CMD]
+# Anything before -- would be passed to nix-shell, whereas anything after -- would be assumed to constitute a single command to be combined and run from nix-shell. If no command is provided, a default command 'true' is assumed.
+cmd='true'
+nixargs=()
+while (( $# > 0 )); do
+    case "$1" in
+        --)
+            shift 1
+            cmd="$@"
+            break
+            ;;
+        *)
+            nixargs+=( "$1" )
+            shift 1
+            ;;
+    esac
+
+done
+
+exec nix-shell /nix-build-ghc-android/shell.nix "${nixargs[@]}" --run "$cmd"

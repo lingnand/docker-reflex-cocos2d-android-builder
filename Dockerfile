@@ -15,9 +15,26 @@ RUN wget -O- http://nixos.org/releases/nix/nix-$NIX_VERSION/nix-$NIX_VERSION-x86
     && rm -rf "/nix-$NIX_VERSION-x86_64-linux" /home /usr/sbin /var \
     && ln -s /bin /usr/bin \
     && nix-env -u --always \
-    && nix-env -iA nixpkgs.stdenv nixpkgs.nix nixpkgs.bash nixpkgs.awscli \
+    && nix-env -iA nixpkgs.stdenv nixpkgs.bash \
     && nix-collect-garbage -d
 
 COPY nix-build-ghc-android /nix-build-ghc-android
-RUN nix-shell --run true /nix-build-ghc-android/shell.nix
+# add a convenience script to facilitate running of commands inside the shell
+COPY nix-build-ghc-android-runner /nix-build-ghc-android-runner
+
 ENTRYPOINT ["nix-shell", "/nix-build-ghc-android/shell.nix"]
+
+# build all the default env dependencies
+RUN /nix-build-ghc-android-runner
+
+# build Hipmunk
+COPY Hipmunk.nix /Hipmunk.nix
+RUN /nix-build-ghc-android-runner --arg extraGhcPkgs 'import /Hipmunk.nix'
+
+# build reflex
+COPY reflex.nix /reflex.nix
+RUN /nix-build-ghc-android-runner --arg extraGhcPkgs 'import /reflex.nix'
+
+# build cocos stuff
+COPY cocos2d.nix /cocos2d.nix
+RUN /nix-build-ghc-android-runner --arg extraGhcPkgs 'import /cocos2d.nix'
