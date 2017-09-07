@@ -14,8 +14,8 @@ let
     src = pkgs.fetchFromGitHub {
       owner = "lynnard";
       repo = "cocos2d-hs";
-      rev = "899124e80e7bf499b06eebafff082dd6b8e51975";
-      sha256 = "1mkzv9a5af9msywqa99chq98gaa4130zxdlfjv28crzwwwda2gq2";
+      rev = "d3536e8e5d5eca6491b2dd3605ee61a3c089f43a";
+      sha256 = "1wi9vbq9bw76ajlz3m8qy2kawzsmqq4l5kbsna2zm18swb6703na";
     };
     configureFlags = [
       "--extra-include-dirs=${androidenv.androidndk}/libexec/${androidenv.androidndk.name}/sources/cxx-stl/gnu-libstdc++/4.9/include"
@@ -34,7 +34,7 @@ let
     pname = "reflex-cocos2d";
     version = "0.1.0.0";
     libraryHaskellDepends =
-      [ base colour containers semigroups mtl monad-control prim-uniq primitive dependent-map ref-tf dependent-sum diagrams-lib reflex lens time data-default contravariant exception-transformers free cocos2d-hs StateVar MonadRandom ]
+      [ base colour containers semigroups mtl monad-control prim-uniq primitive dependent-map ref-tf dependent-sum diagrams-lib lens time data-default contravariant exception-transformers free cocos2d-hs StateVar MonadRandom lifted-base ]
       ++Hipmunk
       ++reflex;
     homepage = "https://github.com/lynnard/reflex-cocos2d";
@@ -43,8 +43,8 @@ let
     src = pkgs.fetchFromGitHub {
       owner = "lynnard";
       repo = "reflex-cocos2d";
-      rev = "842a3bf80e0e743b71c2d93600f0b245a348964d";
-      sha256 = "0a0wkmii4faz5bqip4nkr8gsr2ciq2zhn9ava1lw7qi0plbwb4jl";
+      rev = "a69f5c1e2afe66cc9365c0eb9334e525f7f8b421";
+      sha256 = "015hvm8nma5y5n71h4mcz7sn61p3iij07jvhmg6ybz3kzdg6gn72";
     };
   };
 in [ cocos2d-hs reflex-cocos2d ]
