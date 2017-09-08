@@ -1,0 +1,32 @@
+dependencies: \
+  /Applications/Cocos/frameworks/cocos2d-x-3.9/cocos/scripting/lua-bindings/manual/CCLuaValue.cpp \
+  /Applications/Cocos/frameworks/cocos2d-x-3.9/cocos/scripting/lua-bindings/manual/CCLuaValue.h \
+  /Applications/Cocos/frameworks/cocos2d-x-3.9/cocos/scripting/lua-bindings/proj.ios_mac/../../../../external/lua/luajit/include/lua.h \
+  /Applications/Cocos/frameworks/cocos2d-x-3.9/cocos/scripting/lua-bindings/proj.ios_mac/../../../../external/lua/luajit/include/luaconf.h \
+  /Applications/Cocos/frameworks/cocos2d-x-3.9/cocos/scripting/lua-bindings/proj.ios_mac/../../../base/ccTypes.h \
+  /Applications/Cocos/frameworks/cocos2d-x-3.9/cocos/scripting/lua-bindings/proj.ios_mac/../../../math/CCGeometry.h \
+  /Applications/Cocos/frameworks/cocos2d-x-3.9/cocos/scripting/lua-bindings/proj.ios_mac/../../../platform/CCPlatformMacros.h \
+  /Applications/Cocos/frameworks/cocos2d-x-3.9/cocos/scripting/lua-bindings/proj.ios_mac/../../../base/ccConfig.h \
+  /Applications/Cocos/frameworks/cocos2d-x-3.9/cocos/scripting/lua-bindings/proj.ios_mac/../../../platform/CCPlatformConfig.h \
+  /Applications/Cocos/frameworks/cocos2d-x-3.9/cocos/scripting/lua-bindings/proj.ios_mac/../../../platform/CCPlatformDefine.h \
+  /Applications/Cocos/frameworks/cocos2d-x-3.9/cocos/scripting/lua-bindings/proj.ios_mac/../../../platform/ios/CCPlatformDefine-ios.h \
+  /Applications/Cocos/frameworks/cocos2d-x-3.9/cocos/scripting/lua-bindings/proj.ios_mac/../../../base/ccMacros.h \
+  /Applications/Cocos/frameworks/cocos2d-x-3.9/cocos/scripting/lua-bindings/proj.ios_mac/../../../base/CCConsole.h \
+  /Applications/Cocos/frameworks/cocos2d-x-3.9/cocos/scripting/lua-bindings/proj.ios_mac/../../../base/CCRef.h \
+  /Applications/Cocos/frameworks/cocos2d-x-3.9/cocos/scripting/lua-bindings/proj.ios_mac/../../../platform/CCStdC.h \
+  /Applications/Cocos/frameworks/cocos2d-x-3.9/cocos/scripting/lua-bindings/proj.ios_mac/../../../platform/ios/CCStdC-ios.h \
+  /Applications/Cocos/frameworks/cocos2d-x-3.9/cocos/scripting/lua-bindings/proj.ios_mac/../../../base/ccRandom.h \
+  /Applications/Cocos/frameworks/cocos2d-x-3.9/cocos/scripting/lua-bindings/proj.ios_mac/../../../math/CCMath.h \
+  /Applications/Cocos/frameworks/cocos2d-x-3.9/cocos/scripting/lua-bindings/proj.ios_mac/../../../math/Vec2.h \
+  /Applications/Cocos/frameworks/cocos2d-x-3.9/cocos/scripting/lua-bindings/proj.ios_mac/../../../math/CCMathBase.h \
+  /Applications/Cocos/frameworks/cocos2d-x-3.9/cocos/scripting/lua-bindings/proj.ios_mac/../../../math/Vec2.inl \
+  /Applications/Cocos/frameworks/cocos2d-x-3.9/cocos/scripting/lua-bindings/proj.ios_mac/../../../math/Vec3.h \
+  /Applications/Cocos/frameworks/cocos2d-x-3.9/cocos/scripting/lua-bindings/proj.ios_mac/../../../math/Vec3.inl \
+  /Applications/Cocos/frameworks/cocos2d-x-3.9/cocos/scripting/lua-bindings/proj.ios_mac/../../../math/Mat4.h \
+  /Applications/Cocos/frameworks/cocos2d-x-3.9/cocos/scripting/lua-bindings/proj.ios_mac/../../../math/Vec4.h \
+  /Applications/Cocos/frameworks/cocos2d-x-3.9/cocos/scripting/lua-bindings/proj.ios_mac/../../../math/Vec4.inl \
+  /Applications/Cocos/frameworks/cocos2d-x-3.9/cocos/scripting/lua-bindings/proj.ios_mac/../../../math/Mat4.inl \
+  /Applications/Cocos/frameworks/cocos2d-x-3.9/cocos/scripting/lua-bindings/proj.ios_mac/../../../math/Quaternion.h \
+  /Applications/Cocos/frameworks/cocos2d-x-3.9/cocos/scripting/lua-bindings/proj.ios_mac/../../../math/Quaternion.inl \
+  /Applications/Cocos/frameworks/cocos2d-x-3.9/cocos/scripting/lua-bindings/proj.ios_mac/../../../platform/CCGL.h \
+  /Applications/Cocos/frameworks/cocos2d-x-3.9/cocos/scripting/lua-bindings/proj.ios_mac/../../../platform/ios/CCGL-ios.h

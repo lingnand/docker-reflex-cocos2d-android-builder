@@ -27,6 +27,13 @@ ENTRYPOINT ["nix-shell", "/nix-build-ghc-android/shell.nix"]
 # build all the default env dependencies
 RUN /nix-build-ghc-android-runner
 
+# setting up cocos
+# cutdown version of cocos
+COPY cocos2d-x-3.9 /cocos-frameworks/cocos2d-x-3.9
+ENV COCOS_FRAMEWORKS=/cocos-frameworks
+# used for parsing cocos config json
+RUN nix-env -iA nixpkgs.pkgs.jq
+
 # build Hipmunk
 COPY Hipmunk.nix /Hipmunk.nix
 RUN /nix-build-ghc-android-runner --arg extraGhcPkgs 'import /Hipmunk.nix'
