@@ -45,3 +45,6 @@ RUN /nix-build-ghc-android-runner --arg extraGhcPkgs 'import /reflex.nix'
 # build cocos stuff
 COPY cocos2d.nix /cocos2d.nix
 RUN /nix-build-ghc-android-runner --arg extraGhcPkgs 'import /cocos2d.nix'
+
+COPY reflex-cocos2d.nix /reflex-cocos2d.nix
+RUN /nix-build-ghc-android-runner --arg extraGhcPkgs 'import /reflex-cocos2d.nix'
